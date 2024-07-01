@@ -1,0 +1,12 @@
+{
+    "navbar": {
+      "about": "Chi sono",
+      "skills": "Skills",
+      "projects": "Progetti",
+      "contact": "Mettiti in contatto!"
+    },
+    "hero-contacts": {
+        "title": "Contatti principali"
+    }
+}
+  
