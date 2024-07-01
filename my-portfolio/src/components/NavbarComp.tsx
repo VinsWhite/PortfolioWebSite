@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // To Do: plane and name animation and open menu animation
+// change language due to region
 
 export default function NavbarComp() {
     const [useMenu, setUseMenu] = useState<boolean>(false);
@@ -18,10 +19,10 @@ export default function NavbarComp() {
 
   return (
     <>
-        <nav className="select-none flex justify-between px-3 py-4 opacity-90 bg-primary">
+        <nav className="select-none flex justify-between px-3 py-4 opacity-90 bg-primary static md:fixed top-0 left-0 right-0">
             <div className="flex gap-3 items-center">
                 <FaRegPaperPlane />
-                <Link to='/' className="font-semibold text-xl">Vincenzo Saccone</Link>
+                <Link to='/' className="font-bold text-2xl text-secondary">Vincenzo Saccone</Link>
             </div>
             <div className="hidden md:flex gap-3 items-center">
                 <p className="cursor-pointer text-black hover:text-gray-700">{t("navbar.about")}</p>
