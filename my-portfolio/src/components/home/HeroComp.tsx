@@ -6,9 +6,12 @@ export default function HeroComp() {
 
     const [t] = useTranslation("global");
     
+  // To do: through using bounce animation talwind class, animate an arrow bottom
+  // !! look at 'animate-pulse'
+
   return (
     <>
-        <div className="w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md">
+        <div className="w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md cursor-pointer duration-300 hover:scale-95">
             <img src="/images/vincenzo.png" alt="vincenzo" />
             <div className="bg-secondary text-white p-3">
                 <h2 className="text-xl">{t("hero-contacts.title")}</h2>

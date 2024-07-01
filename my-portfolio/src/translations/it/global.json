@@ -11,7 +11,7 @@
     "introduction": {
       "greeting": "Ciao!",
       "who": "Sono Vincenzo!",
-      "description": "Sono un Junior Full Stack Developer con sede in Italia. Sono appassionato di tecnologia e sempre alla ricerca di nuove sfide.",
+      "description": "Sono un <strong>Junior Full Stack Developer</strong> con sede in Italia. Sono appassionato di tecnologia e sempre alla ricerca di nuove sfide.",
       "cv": "Scarica CV"
     }
 }

@@ -8,9 +8,16 @@ import global_it from './translations/it/global.json'
 import i18next from 'i18next'
 import { I18nextProvider } from 'react-i18next'
 
+// find out which is the browser language
+const browserLanguage = navigator.language;
+
+// supported languages
+const supportedLanguages = ['en', 'it'];
+const defaultLanguage = supportedLanguages.includes(browserLanguage.split('-')[0]) ? browserLanguage.split('-')[0] : 'en';
+
 i18next.init({
   interpolation: {escapeValue: false},
-  lng: "en",
+  lng: defaultLanguage,
   resources: {
     en: {
       global: global_en

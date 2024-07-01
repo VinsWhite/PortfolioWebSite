@@ -11,7 +11,7 @@
     "introduction": {
       "greeting": "Hello!",
       "who": "It's Vincenzo!",
-      "description": "I’m a Junior Full Stack Developer based in Italy. I am passionate about technology and always looking for new challenges.",
+      "description": "I’m a <strong>Junior Full Stack Developer</strong> based in Italy. I am passionate about technology and always looking for new challenges.",
       "cv": "Download CV"
     }
 }
