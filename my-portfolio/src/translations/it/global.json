@@ -13,6 +13,12 @@
       "who": "Sono Vincenzo!",
       "description": "Sono un <strong>Junior Full Stack Developer</strong> con sede in Italia. Sono appassionato di tecnologia e sempre alla ricerca di nuove sfide.",
       "cv": "Scarica CV"
+    },
+    "languages": {
+      "it": "Italiano",
+      "en": "Inglese",
+      "jp": "Giapponese",
+      "native": "Lingua madre"
     }
 }
   
