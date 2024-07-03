@@ -14,11 +14,28 @@
       "description": "I’m a <strong>Junior Full Stack Developer</strong> based in Italy. I am passionate about technology and always looking for new challenges.",
       "cv": "Download CV"
     },
+    "skills": {
+      "title": "Technical Skills"
+    },
     "languages": {
+      "title": "Languages",
       "it": "Italian",
       "en": "English",
       "jp": "Japanese",
       "native": "Native language"
+    },
+    "projects" : {
+      "title": "My Projects",
+      "tech": "Used technologies: ",
+      "lan": "Languages: ",
+      "more": "More info",
+      "pittari": {
+        "title": "Pittari Website",
+        "description": "My project combines a passion for languages with web development. Pittari (ピッタリ in Japanese) is a portal that offers various useful features for learning Japanese. From kanji search to articles and forums, Pittari provides comprehensive resources for Japanese language learners."
+      }
+    },
+    "hobbies": {
+      "title": "Hobbies and Interests"
     }
 }
   

@@ -1,11 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import { skillsFront, skillsBack, skillsDesktop } from '../../assets/data/skills';
 import SkillIcon from './SkillsIconComp';
 
 export default function SkillsComp() {
+  const [t] = useTranslation("global");
     
   return (
     <div>
-      <h2 className="text-secondary font-bold text-2xl">Technical Skills</h2>
+      <h2 className="text-secondary font-bold text-2xl">{t("skills.title")}</h2>
       <div className="ps-10 pt-2">
         <p className="uppercase font-semibold">front-end development</p>
         <div className="grid grid-cols-6 md:grid-cols-12 py-2 gap-3">

@@ -19,7 +19,7 @@ export default function NavbarComp() {
 
   return (
     <>
-        <nav className="select-none flex justify-between px-3 py-4 opacity-90 bg-primary static md:fixed top-0 left-0 right-0">
+        <nav className="z-10 select-none flex justify-between px-3 py-4 opacity-90 bg-primary static md:fixed top-0 left-0 right-0">
             <div className="flex gap-3 items-center">
                 <FaRegPaperPlane />
                 <Link to='/' className="font-bold text-2xl text-secondary">Vincenzo Saccone</Link>

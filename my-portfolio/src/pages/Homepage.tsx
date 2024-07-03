@@ -2,6 +2,7 @@ import HeroComp from "../components/home/HeroComp";
 import IntroductionComp from "../components/home/IntroductionComp";
 import LanguagesComp from "../components/home/LanguagesComp";
 import SkillsComp from "../components/home/SkillsComp";
+import ProjectsComp from "../components/home/ProjectsComp";
 
 // To do: scroll bar custom
 
@@ -16,6 +17,7 @@ export default function Homepage() {
           <SkillsComp />
           <LanguagesComp />
         </div>
+        <ProjectsComp />
       </>
     )
   }

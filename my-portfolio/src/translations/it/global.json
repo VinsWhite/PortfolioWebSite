@@ -14,11 +14,28 @@
       "description": "Sono un <strong>Junior Full Stack Developer</strong> con sede in Italia. Sono appassionato di tecnologia e sempre alla ricerca di nuove sfide.",
       "cv": "Scarica CV"
     },
+    "skills": {
+      "title": "Competenze Tecniche"
+    },
     "languages": {
+      "title": "Lingue",
       "it": "Italiano",
       "en": "Inglese",
       "jp": "Giapponese",
       "native": "Lingua madre"
+    },
+    "projects" : {
+      "title": "I miei progetti",
+      "tech": "Tecnologie usate: ",
+      "lan": "Lingue: ",
+      "more": "Più info",
+      "pittari": {
+        "title": "Sito Web Pittari",
+        "description": "Il mio progetto unisce la passione per le lingue con lo sviluppo web. Pittari (ピッタリ in giapponese) è un portale che offre diverse funzionalità utili per imparare il giapponese. Dalla ricerca di kanji ad articoli e forum, Pittari fornisce risorse complete per gli studenti della lingua giapponese."
+      }
+    },
+    "hobbies": {
+      "title": "Hobby e interessi"
     }
 }
   
