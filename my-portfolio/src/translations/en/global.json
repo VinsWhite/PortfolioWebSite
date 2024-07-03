@@ -30,6 +30,7 @@
       "lan": "Languages: ",
       "more": "More info",
       "pittari": {
+        "url": "pittari",
         "title": "Pittari Website",
         "description": "My project combines a passion for languages with web development. Pittari (ピッタリ in Japanese) is a portal that offers various useful features for learning Japanese. From kanji search to articles and forums, Pittari provides comprehensive resources for Japanese language learners."
       }

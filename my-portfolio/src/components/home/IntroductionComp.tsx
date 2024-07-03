@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next"
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
-import cv_eng from '../../assets/cv/ENG - curriculumWithPhoto3.pdf';
-import cv_it from '../../assets/cv/curriculum-aggiornato5.pdf'
+/* import cv_eng from '../../assets/cv/ENG - curriculumWithPhoto3.pdf';
+import cv_it from '../../assets/cv/curriculum-aggiornato5.pdf' */
 
 export default function IntroductionComp() {
   const [t, i18n] = useTranslation("global")
@@ -20,16 +20,16 @@ export default function IntroductionComp() {
           {currentLanguage === 'en' ? (
             <a 
               className="bg-secondary text-white py-1 px-2 rounded-full shadow-md shadow-secondary duration-300 hover:scale-105" 
-              href={cv_eng} 
+              href='/cv/ENG - curriculumWithPhoto3.pdf'
               download="ENG - Curriculum Vincenzo Saccone" 
-              target='_blank'>{t("introduction.cv")}
+              >{t("introduction.cv")}
             </a>
           ) : (
             <a 
               className="bg-secondary text-white py-1 px-2 rounded-full shadow-md shadow-secondary duration-300 hover:scale-105" 
-              href={cv_it} 
+              href='/cv/curriculum-aggiornato5.pdf' 
               download="IT - Curriculum Vincenzo Saccone" 
-              target='_blank'>{t("introduction.cv")}
+              >{t("introduction.cv")}
             </a>
           )}
         </div>

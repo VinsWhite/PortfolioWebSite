@@ -9,11 +9,11 @@ import ProjectsComp from "../components/home/ProjectsComp";
 export default function Homepage() {
     return (
       <>
-        <div className=" bg-primary grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 px-5 py-20 overflow-x-hidden select-none">
+        <div className="bg-primary grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 px-5 py-20 overflow-x-hidden select-none">
           <HeroComp />
           <IntroductionComp />
         </div>
-        <div className="bg-almostWhite px-5 py-10">
+        <div className="bg-almostWhite px-5 py-10 select-none">
           <SkillsComp />
           <LanguagesComp />
         </div>
