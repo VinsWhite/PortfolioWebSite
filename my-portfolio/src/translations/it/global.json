@@ -11,7 +11,7 @@
     "introduction": {
       "greeting": "Ciao!",
       "who": "Sono Vincenzo!",
-      "description": "Sono un <strong>Junior Full Stack Developer</strong> con sede in Italia. Sono appassionato di tecnologia e sempre alla ricerca di nuove sfide.",
+      "description": "Sono un <strong class='bg-secondary text-white px-1 rounded-md'>Junior Full Stack Developer</strong> con sede in Italia. Sono appassionato di tecnologia e sempre alla ricerca di nuove sfide.",
       "cv": "Scarica CV"
     },
     "skills": {
@@ -25,7 +25,7 @@
       "native": "Lingua madre"
     },
     "projects" : {
-      "title": "I miei progetti",
+      "title": "Alcuni miei progetti",
       "tech": "Tecnologie usate: ",
       "lan": "Lingue: ",
       "more": "Più info",
@@ -36,7 +36,7 @@
       },
       "petcenter": {
         "title": "Pet Center",
-        "description": " Esplora il mondo dei tuoi amici pelosi con Pet Center. Focus particolare sulle operazioni CRUD (Create, Read, Update, Delete)."
+        "description": "Esplora il mondo dei tuoi amici pelosi con Pet Center. Focus particolare sulle operazioni CRUD (Create, Read, Update, Delete)."
       },
       "gym_laravel": {
         "title": "Gestionale palestra",
@@ -57,6 +57,13 @@
       "travel": "Viaggiare",
       "learning": "Imparare",
       "lan": "lingue"
+    },
+    "getintouch": {
+      "title": "Mettiti In Contatto",
+      "name": "Nome",
+      "email": "Email",
+      "message": "Messaggio",
+      "button": "Invia Messaggio"
     }
 }
   

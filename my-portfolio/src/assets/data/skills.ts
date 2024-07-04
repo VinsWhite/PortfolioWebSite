@@ -4,7 +4,7 @@ export const skillsFront: skillsAttribute[] = [
     { href: "https://developer.mozilla.org/en-US/docs/Web/HTML", imgSrc: "/images/html.png", imgAlt: "html" },
     { href: "https://developer.mozilla.org/en-US/docs/Web/CSS", imgSrc: "/images/css.png", imgAlt: "css" },
     { href: "https://sass-lang.com/documentation/", imgSrc: "/images/sass.png", imgAlt: "sass" },
-    { href: "https://v2.tailwindcss.com/docs", imgSrc: "/images/tailwind.png", imgAlt: "tailwind" },
+    { href: "https://tailwindcss.com/", imgSrc: "/images/tailwind.png", imgAlt: "tailwind" },
     { href: "https://getbootstrap.com/", imgSrc: "/images/bootstrap.png", imgAlt: "bootstrap" },
     { href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", imgSrc: "/images/js.png", imgAlt: "javascript" },
     { href: "https://www.typescriptlang.org/docs/", imgSrc: "/images/ts.png", imgAlt: "typescript" },

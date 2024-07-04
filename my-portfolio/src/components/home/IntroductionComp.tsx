@@ -10,7 +10,7 @@ export default function IntroductionComp() {
 
   return (
     <>
-      <div className="flex flex-col justify-center">
+      <div className="order-1 md:order-2 flex flex-col justify-center md:pr-32">
         <h2 className="text-4xl font-semibold text-secondary">{t("introduction.greeting")}</h2>
         <h2 className="text-3xl font-semibold text-secondary">{t("introduction.who")}</h2>
         <p className="text-lg" dangerouslySetInnerHTML={{ __html: t("introduction.description") }}></p>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
 import truncateText from "../../assets/functions/truncate";
 import HobbiesComp from "./HobbiesComp";
+import { GB, IT } from "country-flag-icons/react/1x1";
 
 interface Project {
     id: number;
@@ -106,7 +107,9 @@ const ProjectsComp: React.FC = () => {
                             <h3 className="text-xl font-semibold text-center pt-2">{project.title}</h3>
                             <p className="px-3 pb-2">{truncateText(project.description, 120)}</p>
                             <div className="border-t-2 border-secondary">
-                                <p className="flex justify-end gap-2 items-center font-semibold">{t("projects.lan")} {project.language === "IT" ? "IT" : "GB"}</p>
+                                <p className="flex justify-end gap-2 items-center font-semibold">
+                                    {t("projects.lan")} {project.language === "IT" ? <IT className="size-5 pr-1" /> : <GB className="size-5 pr-1" />}
+                                </p>
                                 <div className="flex sm:flex-col py-2 lg:flex-row justify-end gap-2 items-end font-semibold">
                                     <p>{t("projects.tech")}</p>
                                     <div className="flex gap-2">

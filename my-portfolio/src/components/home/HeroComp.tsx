@@ -11,7 +11,7 @@ export default function HeroComp() {
 
   return (
     <>
-        <div className="w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md cursor-pointer duration-300 hover:scale-95">
+        <div className="order-2 md:order-1 w-3/4 sm:w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md cursor-pointer duration-300 hover:scale-95">
             <img src="/images/vincenzo.png" alt="vincenzo" />
             <div className="bg-secondary text-white p-3">
                 <h2 className="text-xl">{t("hero-contacts.title")}</h2>

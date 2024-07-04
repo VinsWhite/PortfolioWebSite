@@ -11,7 +11,7 @@
     "introduction": {
       "greeting": "Hello!",
       "who": "It's Vincenzo!",
-      "description": "I’m a <strong>Junior Full Stack Developer</strong> based in Italy. I am passionate about technology and always looking for new challenges.",
+      "description": "I’m a <strong class='bg-secondary text-white px-1 rounded-md'>Junior Full Stack Developer</strong> based in Italy. I am passionate about technology and always looking for new challenges.",
       "cv": "Download CV"
     },
     "skills": {
@@ -25,7 +25,7 @@
       "native": "Native language"
     },
     "projects" : {
-      "title": "My Projects",
+      "title": "Some of my projects",
       "tech": "Used technologies: ",
       "lan": "Languages: ",
       "more": "More info",
@@ -57,6 +57,13 @@
       "travel": "Travelling",
       "learning": "Learning",
       "lan": "languages"
+    },
+    "getintouch": {
+      "title": "Get In Touch",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "button": "Send Message"
     }
 }
   
