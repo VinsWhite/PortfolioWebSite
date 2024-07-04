@@ -30,13 +30,28 @@
       "lan": "Languages: ",
       "more": "More info",
       "pittari": {
-        "url": "pittari",
         "title": "Pittari Website",
-        "description": "My project combines a passion for languages with web development. Pittari (ピッタリ in Japanese) is a portal that offers various useful features for learning Japanese. From kanji search to articles and forums, Pittari provides comprehensive resources for Japanese language learners."
+        "description": "The project combines a passion for languages with web development. Pittari (ピッタリ in Japanese) is a portal that offers various useful features for learning Japanese. From kanji search to articles and forums, Pittari provides comprehensive resources for Japanese language learners."
+      },
+      "petcenter": {
+        "title": "Pet Center",
+        "description": "Welcome to Pet Center, your online hub for everything related to pets. A particular focus on CRUD operations (Create, Read, Update, Delete)."
+      },
+      "gym_laravel": {
+        "title": "Gym Management",
+        "description": "A platform that allows users to book a wide range of activities and courses managed by registered providers. Users can explore various categories of activities such as sports, hobbies."
+      },
+      "gym_wordpress": {
+        "title": "Dynamic Body Gym",
+        "description": "This WordPress website is designed for a gym and wellness center, offering comprehensive features to cater to members and potential clients alike. It serves as a central hub for information about gym services, operating hours, fitness classes, and more."
       }
     },
     "hobbies": {
-      "title": "Hobbies and Interests"
+      "title": "Hobbies and Interests",
+      "reading": "Reading",
+      "travel": "Travelling",
+      "learning": "Learning",
+      "lan": "languages"
     }
 }
   

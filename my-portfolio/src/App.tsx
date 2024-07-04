@@ -20,7 +20,7 @@ function App() {
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
         <FooterComp />
-        <div className="block md:hidden fixed top-3/4 right-0 select-none cursor-pointer duration-100 bg-gray-300 hover:bg-gray-200 p-1 rounded-l-lg">
+        <div className="block lg:hidden fixed top-3/4 right-0 select-none cursor-pointer duration-100 bg-gray-300 hover:bg-gray-200 p-1 rounded-l-lg">
           <IoIosArrowBack onClick={() => setOpenHobbyMenu(!openHobbyMenu)} className="size-5" />
         </div>
       </div>

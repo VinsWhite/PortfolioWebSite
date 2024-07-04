@@ -1,43 +1,135 @@
-import { useTranslation } from "react-i18next"
-import HobbiesComp from "./HobbiesComp";
-import { IT } from "country-flag-icons/react/1x1";
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
 import truncateText from "../../assets/functions/truncate";
+import HobbiesComp from "./HobbiesComp";
 
-export default function ProjectsComp() {
-    const [t] = useTranslation("global");
-    const [openModal, setOpenModal] = useState<boolean>(false);
-    const pittariDescription = t("projects.pittari.description");
+interface Project {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    githubLink: string;
+    language: "GB" | "IT";
+    technologies: { image: string; alt: string }[];
+}
 
-  return (
-    <>
+const ProjectsComp: React.FC = () => {
+    const { t } = useTranslation("global");
+
+    const projects: Project[] = [
+        {
+            id: 1,
+            title: t("projects.pittari.title"),
+            description: t("projects.pittari.description"),
+            image: "/images/pittari-screen.png",
+            githubLink: "https://github.com/VinsWhite/Pittari-WebSite",
+            language: "IT",
+            technologies: [
+                { image: "/images/react.png", alt: "React" },
+                { image: "/images/redux.png", alt: "Redux" },
+                { image: "/images/sass.png", alt: "sass" },
+                { image: "/images/bootstrap.png", alt: "Bootstrap" },
+                { image: "/images/laravel.png", alt: "Laravel" }
+            ]
+        },
+        {
+            id: 2,
+            title: t("projects.petcenter.title"),
+            description: t("projects.petcenter.description"),
+            image: "/images/petcenter.png",
+            githubLink: "https://github.com/VinsWhite/Pet-Center",
+            language: "GB",
+            technologies: [
+                { image: "/images/react.png", alt: "React" },
+                { image: "/images/ts.png", alt: "TypeScript" },
+                { image: "/images/bootstrap.png", alt: "Bootstrap" },
+                { image: "/images/nodejs.png", alt: "Node.js" },
+                { image: "/images/mongodb.png", alt: "mongodb" }
+            ]
+        },
+        {
+          id: 3,
+          title: t("projects.gym_laravel.title"),
+            description: t("projects.gym_laravel.description"),
+            image: "/images/gymManagement_laravel.png",
+            githubLink: "https://github.com/VinsWhite/ProgettoSett7DB",
+            language: "GB",
+            technologies: [
+                { image: "/images/laravel.png", alt: "laravel" },
+                { image: "/images/tailwind.png", alt: "tailwind.js" }
+            ]
+        },
+        {
+          id: 4,
+          title: t("projects.gym_wordpress.title"),
+            description: t("projects.gym_wordpress.description"),
+            image: "/images/gym_wordpress.png",
+            githubLink: "https://github.com/VinsWhite/ProgettoSett2DB",
+            language: "IT",
+            technologies: [
+                { image: "/images/wordpress.png", alt: "wordpress" },
+                { image: "/images/php.png", alt: "php" },
+            ]
+        },
+        /* {
+          id: 5,
+          title: t("projects.gym_wordpress.title"),
+            description: t("projects.gym_wordpress.description"),
+            image: "/images/gym_wordpress.png",
+            githubLink: "https://github.com/VinsWhite/ProgettoSett2DB",
+            language: "IT",
+            technologies: [
+                { image: "/images/wordpress.png", alt: "wordpress" },
+                { image: "/images/php.png", alt: "php" },
+            ]
+        }, */
+    ];
+
+    const [selectedProject, setSelectedProject] = useState<number | null>(null);
+
+    const handleOpenProjectDetail = (projectId: number) => {
+        setSelectedProject(projectId);
+    };
+
+    const handleCloseProjectDetail = () => {
+        setSelectedProject(null);
+    };
+
+    return (
         <div className="bg-primary px-5 py-10 relative">
             <h2 className="text-secondary font-bold text-2xl">{t("projects.title")}</h2>
-            <div className="py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 font-sans">
-
-              <div className="select-none cursor-pointer border border-secondary rounded-md shadow-md shadow-secondary px-1 pt-1 pb-3 duration-300 hover:scale-105">
-                <a href="https://github.com/VinsWhite/Pittari-WebSite" target="_blank" className="hover:opacity-75">
-                  <img src="/images/pittari-screen.png" alt="pittari" />
-                  <h3 className="text-xl font-semibold text-center pt-2">{t("projects.pittari.title")}</h3>
-                  <p className="px-3 pb-2">{truncateText(pittariDescription, 150)}</p>
-                  <div className="border-t-2 border-secondary">
-                    <p className="flex justify-end gap-2 items-center font-semibold">{t("projects.lan")} <IT className="size-5" /></p>
-                    <div className="flex justify-end gap-2 items-center font-semibold">
-                      <p>{t("projects.tech")}</p>
-                      <img className="w-5" src="/images/react.png" alt="React" />
-                      <img className="w-5" src="/images/redux.png" alt="Redux" />
-                      <img className="w-5" src="/images/laravel.png" alt="Laravel" />
+            <div className="py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 font-sans">
+                {projects.map((project) => (
+                    <div key={project.id} className="select-none cursor-pointer border border-secondary rounded-md shadow-md shadow-secondary px-1 pt-1 pb-3 duration-300 hover:scale-105">
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
+                            <img src={project.image} alt={project.title} />
+                            <h3 className="text-xl font-semibold text-center pt-2">{project.title}</h3>
+                            <p className="px-3 pb-2">{truncateText(project.description, 150)}</p>
+                            <div className="border-t-2 border-secondary">
+                                <p className="flex justify-end gap-2 items-center font-semibold">{t("projects.lan")} {project.language === "IT" ? "IT" : "GB"}</p>
+                                <div className="flex justify-end gap-2 items-center font-semibold">
+                                    <p>{t("projects.tech")}</p>
+                                    {project.technologies.map((tech, index) => (
+                                        <img key={index} className="w-5" src={tech.image} alt={tech.alt} />
+                                    ))}
+                                </div>
+                            </div>
+                        </a>
+                        <button onClick={() => handleOpenProjectDetail(project.id)} className="bg-secondary rounded-md p-2 text-white shadow-sm">{t("projects.more")}</button>
                     </div>
-                  </div>
-                </a>
-                <button onClick={() => setOpenModal(true)} className="bg-secondary rounded-md p-2 text-white shadow-sm">{t("projects.more")}</button>
-              </div>
-
-              {openModal && <ProjectDetail setOpenModal={setOpenModal} title={t("projects.pittari.title")} description={t("projects.pittari.description")} />}
+                ))}
+                {selectedProject !== null && (
+                    <ProjectDetail
+                        setOpenModal={handleCloseProjectDetail}
+                        title={projects[selectedProject - 1].title} 
+                        description={projects[selectedProject - 1].description}
+                    />
+                )}
             </div>
             <HobbiesComp />
         </div>
-    </>
-  )
-}
+    );
+};
+
+export default ProjectsComp;

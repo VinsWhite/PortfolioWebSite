@@ -1,4 +1,5 @@
 import React from "react";
+import { RxCross1 } from "react-icons/rx";
 
 interface ProjectDetailProps {
     setOpenModal: (isOpen: boolean) => void;
@@ -14,7 +15,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ setOpenModal, title, desc
                 <div className="bg-white p-6 rounded-md shadow-md relative">
                     <h3 className="text-xl font-semibold mb-4">{title}</h3>
                     <p className="mb-4">{description}</p>
-                    <button onClick={() => setOpenModal(false)} className="absolute top-0 right-0 bg-secondary text-white px-4 py-2 rounded-full shadow-sm">X</button>
+                    <button onClick={() => setOpenModal(false)} className="size-6 m-1 pl-1 absolute top-0 right-0 bg-secondary text-white rounded-full shadow-sm"><RxCross1 /></button>
                 </div>
             </div>
         </>
