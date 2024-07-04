@@ -12,15 +12,15 @@ export default function HobbiesComp() {
             <div className="pt-4 grid grid-cols-1 gap-4">
                 <div className="flex justify-around items-center">
                     <FaBookReader className="size-20 text-almostWhite" />
-                    <p className="text-white">Reading</p>
+                    <p className="text-white">{t("hobbies.reading")}</p>
                 </div>
                 <div className="flex justify-around items-center">
                     <MdOutlineModeOfTravel className="size-20 text-almostWhite" />
-                    <p className="text-white">Travelling</p>
+                    <p className="text-white">{t("hobbies.travel")}</p>
                 </div>
                 <div className="flex justify-around items-center">
                     <FaLanguage className="size-20 text-almostWhite" />
-                    <p className="text-white">Learning <br></br> language</p>
+                    <p className="text-white">{t("hobbies.learning")} <br></br> {t("hobbies.lan")}</p>
                 </div>
             </div>
         </div>

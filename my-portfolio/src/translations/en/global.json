@@ -29,6 +29,7 @@
       "tech": "Used technologies: ",
       "lan": "Languages: ",
       "more": "More info",
+      "future": "New projects are in progress... stay tuned!",
       "pittari": {
         "title": "Pittari Website",
         "description": "The project combines a passion for languages with web development. Pittari (ピッタリ in Japanese) is a portal that offers various useful features for learning Japanese. From kanji search to articles and forums, Pittari provides comprehensive resources for Japanese language learners."
@@ -44,6 +45,10 @@
       "gym_wordpress": {
         "title": "Dynamic Body Gym",
         "description": "This WordPress website is designed for a gym and wellness center, offering comprehensive features to cater to members and potential clients alike. It serves as a central hub for information about gym services, operating hours, fitness classes, and more."
+      },
+      "weather": {
+        "title": "Raining Bot",
+        "description": "Raining Bot is a Node.js-based Discord bot designed to provide real-time weather updates and forecasts. This bot leverages weather APIs to deliver accurate and timely weather information directly to your Discord server."
       }
     },
     "hobbies": {
