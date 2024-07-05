@@ -101,7 +101,7 @@ const ProjectsComp: React.FC = () => {
             <h2 className="text-secondary font-bold text-2xl">{t("projects.title")}</h2>
             <div className="py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 font-sans">
                 {projects.map((project) => (
-                    <div key={project.id} className="select-none cursor-pointer border border-secondary rounded-md shadow-md shadow-secondary px-1 pt-1 pb-3 duration-300 hover:scale-105">
+                    <div key={project.id} className="select-none bg-almostWhite cursor-pointer border border-secondary rounded-md shadow-md shadow-secondary px-1 pt-1 pb-3 duration-300 hover:scale-105">
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
                             <img src={project.image} alt={project.title} />
                             <h3 className="text-xl font-semibold text-center pt-2">{project.title}</h3>

@@ -5,27 +5,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarComp from "./components/NavbarComp";
 import FooterComp from "./components/FooterComp";
 import { IoIosArrowBack } from "react-icons/io";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [openHobbyMenu, setOpenHobbyMenu] = useState<boolean>(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  const handleScroll = () => {
-    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
-    setScrollProgress(progress);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <BrowserRouter>
       <div className="font-mono">
-      <div className="fixed top-0 left-0 h-1 bg-secondary z-50" style={{ width: `${scrollProgress}%` }}></div>
         <NavbarComp />
           <Routes>
             <Route path='/' element={<Homepage />} />
