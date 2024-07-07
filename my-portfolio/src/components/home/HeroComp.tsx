@@ -8,7 +8,7 @@ export default function HeroComp() {
 
   return (
     <motion.div
-      className="order-2 md:order-1 w-3/5 sm:w-2/4 md:w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md cursor-pointer duration-300 hover:scale-95"
+      className="order-2 md:order-1 w-3/4 sm:w-2/4 md:w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md cursor-pointer duration-300 hover:scale-95"
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 2 }}
