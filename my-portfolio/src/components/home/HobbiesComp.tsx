@@ -2,8 +2,11 @@ import { useTranslation } from "react-i18next";
 import { FaBookReader } from "react-icons/fa";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 import { FaLanguage } from "react-icons/fa";
+import { IoIosArrowBack } from "react-icons/io";
+import { useState } from "react";
 
 export default function HobbiesComp() {
+    const [openHobbyMenu, setOpenHobbyMenu] = useState<boolean>(false)
     const [t] = useTranslation("global");
 
   return (
@@ -22,6 +25,9 @@ export default function HobbiesComp() {
                     <FaLanguage className="size-20 text-almostWhite" />
                     <p className="text-white">{t("hobbies.learning")} <br></br> {t("hobbies.lan")}</p>
                 </div>
+            </div>
+            <div className="block lg:hidden fixed top-3/4 right-0 select-none cursor-pointer duration-100 bg-gray-300 hover:bg-gray-200 p-1 rounded-l-lg">
+                <IoIosArrowBack onClick={() => setOpenHobbyMenu(!openHobbyMenu)} className="size-5" />
             </div>
         </div>
   )

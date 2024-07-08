@@ -62,7 +62,7 @@ const FormComp: React.FC = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100 py-20">
+        <div className="flex items-center justify-center min-h-screen bg-gray-100 py-20 px-2">
             <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg relative">
                 <Lottie className="w-20 absolute top-2 right-2" animationData={emailAnimation} />
                 {animationSent && (

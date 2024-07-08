@@ -1,63 +1,60 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
-import nodemailer from 'nodemailer';
-
-dotenv.config();
+const nodemailer = require('nodemailer');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = 5000;
 
 app.use(cors());
-app.use(express.json()); // Middleware per analizzare il corpo della richiesta JSON
-app.use(express.urlencoded({ extended: true }));
-
-// Middleware per consentire l'accesso da qualsiasi origine
+app.use(express.json({ limit: "25mb" }));
+app.use(express.urlencoded({ limit: "25mb" }));
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
 
-// Funzione per inviare l'email
-async function sendEmail(email: string, subject: string, message: string): Promise<string> {
-  try {
+interface EmailOptions {
+  email: string;
+  subject: string;
+  message: string;
+}
+
+function sendEmail({ email, subject, message }: EmailOptions): Promise<{ message: string }> {
+  return new Promise((resolve, reject) => {
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER!,
-        pass: process.env.EMAIL_PASS!,
+        user: "v.saccone4@gmail.com",
+        pass: "VanVin2004",
       },
     });
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER!,
-      to: process.env.RECEIVER_EMAIL!,
+    const mail_configs = {
+      from: "v.saccone4@gmail.com",
+      to: email,
       subject: subject,
-      html: `<p>${message}</p><p>Best Regards</p>`,
+      html: `
+      <p>${message}</p>
+      <p>Best Regards</p>
+      `,
     };
 
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.response);
-    return 'Email sent successfully';
-  } catch (error) {
-    console.error('Error sending email:', error);
-    throw new Error('An error occurred while sending email');
-  }
+    transporter.sendMail(mail_configs, (error, info) => {
+      if (error) {
+        console.log(error);
+        return reject({ message: `An error has occurred` });
+      }
+      return resolve({ message: "Email sent successfully" });
+    });
+  });
 }
 
-// Route per gestire la richiesta POST
-app.post('/send-email', async (req: Request, res: Response) => {
-  const { name, email, message } = req.body;
-
-  try {
-    const response = await sendEmail(email, 'Nuovo messaggio', `${name} ha scritto:\n\n${message}`);
-    res.send(response);
-  } catch (error: any) {
-    res.status(500).send(error.message);
-  }
+app.get("/", (req: Request, res: Response) => {
+  sendEmail(req.query as unknown as EmailOptions)
+    .then((response) => res.send(response.message))
+    .catch((error) => res.status(500).send(error.message));
 });
 
-// Avvio del server
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`nodemailerProject is listening at http://localhost:${port}`);
 });
