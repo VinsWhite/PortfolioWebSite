@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarComp from "./components/NavbarComp";
 import FooterComp from "./components/FooterComp";
+import ScrollToTopComp from "./components/ScrollToTopComp";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
         <FooterComp />
+        <ScrollToTopComp />
       </div>
     </BrowserRouter>
   )
