@@ -24,17 +24,25 @@ export default function NavbarComp() {
                 <FaRegPaperPlane />
                 <Link to='/' className="font-bold text-2xl text-secondary">Vincenzo Saccone</Link>
             </div>
-            <div className="hidden md:flex gap-3 items-center">
-                <NavLink 
-                    to='/' 
-                    className={({ isActive }) => (
-                        'cursor-pointer text-black hover:text-gray-600' + 
-                        (!isActive ? 'text-black' : 'underline underline-offset-2 ')
-                    )}
-                    >
-                    {t("navbar.about")}
-                </NavLink>
-                <Link to='/getintouch' className="bg-black hover:bg-gray-800 text-white rounded-lg py-1 px-2">{t("navbar.contact")}</Link>
+            <div className="hidden md:flex gap-4 items-center">
+            <NavLink 
+                to='/' 
+                className={({ isActive }) => (
+                    'cursor-pointer text-black hover:text-gray-600 ' + 
+                    (isActive ? 'hover:text-gray-800 underline underline-offset-2' : 'text-black')
+                )}
+            >
+                {t("navbar.about")}
+            </NavLink>
+            <NavLink 
+                to='/getintouch' 
+                className={({ isActive }) => (
+                    'bg-black hover:bg-gray-800 text-white font-semibold rounded-lg py-1 px-2 ' + 
+                    (isActive ? 'underline underline-offset-2' : '')
+                )}
+            >
+                {t("navbar.contact")}
+            </NavLink>
                 <IT title="Italian" onClick={() => handleChangeLanguage("it")} className={`size-5 cursor-pointer rounded-full ${i18n.language == 'it' ? "border-2 border-green-700 size-6" : ""}`} />
                 <GB title="English" onClick={() => handleChangeLanguage("en")} className={`size-5 cursor-pointer rounded-full ${i18n.language == 'en' ? "border-2 border-secondary size-6" : ""}`} />
             </div>
