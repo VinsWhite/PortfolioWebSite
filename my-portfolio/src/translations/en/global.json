@@ -63,7 +63,27 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
+      "check": "I accept the Privacy Policy",
       "button": "Send Message"
+    },
+    "privacy-policy": {
+      "title": "Privacy Policy",
+      "welcome": "Welcome to Vincenzo's portfolio website. This Privacy Policy explains how we handle your personal information when you visit our website and use our contact form. By using this website, you agree to the terms outlined in this policy.",
+      "information": "Information We Collect",
+      "collect": "When you use our contact form, we collect the following information: name, to personalize our communication; email address: to respond to your inquires",
+      "how-info": "How We Use Your Information",
+      "purpose": "The information collected through our contact form is used solely for the purpose of: responding to your inquiries and messages, providing you with information related to our services or work.",
+      "legal": "Legal Basis for Processing",
+      "process": "We process your personal data in accordance with the European General Data Protection Regulation (GDPR) and the Italian Legislative Decree no. 196/2003, as amended by Legislative Decree no. 101/2018, and other applicable laws. Our legal basis for processing your information is your consent, which you provide when you submit your information via the contact form.",
+      "third": "Third-Party Sharing",
+      "no-share": "We do not share, sell, or distribute your personal information to third parties, except when required by law.",
+      "international-users": "International Users",
+      "international": "Our website is accessible worldwide. If you are accessing our website from outside the European Union, please be aware that your information may be transferred to, stored, and processed in Italy. By using our services, you consent to such transfer, storage, and processing.",
+      "changes": "Changes to This Policy",
+      "update": "We may update this Privacy Policy from time to time. Any changes will be posted on this page, and the effective date will be updated accordingly.",
+      "contact-us": "Contact Us",
+      "contacts": "If you have any questions or concerns about this Privacy Policy, please contact us at: vincenzosa26@icloud.com",
+      "date": "This Privacy Policy is effective as of 2024/07/09."
     }
 }
   

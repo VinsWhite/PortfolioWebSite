@@ -63,7 +63,27 @@
       "name": "Nome",
       "email": "Email",
       "message": "Messaggio",
+      "check": "Accetto l'Informativa sulla Privacy.",
       "button": "Invia Messaggio"
+    },
+    "privacy-policy": {
+      "title": "Privacy Policy",
+      "welcome": "Benvenuto nel sito portfolio di Vincenzo. Questa Informativa sulla Privacy spiega come gestiamo le tue informazioni personali quando visiti il nostro sito web e utilizzi il nostro modulo di contatto. Utilizzando questo sito, accetti i termini descritti in questa informativa.",
+      "information": "Informazioni che Raccogliamo",
+      "collect": "Quando utilizzi il nostro modulo di contatto, raccogliamo le seguenti informazioni: nome, per personalizzare la nostra comunicazione; indirizzo email, per rispondere alle tue richieste.",
+      "how-info": "Come Utilizziamo le Tue Informazioni",
+      "purpose": "Le informazioni raccolte tramite il nostro modulo di contatto vengono utilizzate esclusivamente per: rispondere alle tue richieste e messaggi, fornirti informazioni relative ai nostri servizi o al nostro lavoro.",
+      "legal": "Base Giuridica per il Trattamento",
+      "process": "Trattiamo i tuoi dati personali in conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR) e il Decreto Legislativo n. 196/2003, come modificato dal Decreto Legislativo n. 101/2018, e altre leggi applicabili. La nostra base giuridica per il trattamento delle tue informazioni è il tuo consenso, che fornisci quando invii le tue informazioni tramite il modulo di contatto.",
+      "third": "Condivisione con Terze Parti",
+      "no-share": "Non condividiamo, vendiamo o distribuiamo le tue informazioni personali a terze parti, eccetto quando richiesto dalla legge.",
+      "international-users": "Utenti Internazionali",
+      "international": "Il nostro sito web è accessibile a livello mondiale. Se accedi al nostro sito dall'esterno dell'Unione Europea, ti preghiamo di essere consapevole che le tue informazioni possono essere trasferite, conservate e trattate in Italia. Utilizzando i nostri servizi, acconsenti a tale trasferimento, conservazione e trattamento.",
+      "changes": "Modifiche a Questa Informativa",
+      "update": "Potremmo aggiornare questa Informativa sulla Privacy di tanto in tanto. Qualsiasi modifica sarà pubblicata su questa pagina e la data di efficacia sarà aggiornata di conseguenza.",
+      "contact-us": "Contattaci",
+      "contacts": "Se hai domande o preoccupazioni riguardo questa Informativa sulla Privacy, ti preghiamo di contattarci all'indirizzo: vincenzosa26@icloud.com",
+      "date": "Questa Informativa sulla Privacy è efficace dal 09/07/2024."
     }
 }
   

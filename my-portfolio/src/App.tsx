@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarComp from "./components/NavbarComp";
 import FooterComp from "./components/FooterComp";
 import ScrollToTopComp from "./components/ScrollToTopComp";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/getintouch' element={<GetInTouch />} />
+            <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
         <FooterComp />

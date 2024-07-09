@@ -6,6 +6,7 @@ import emailAnimation from '../../assets/animations/emailAnimation.json';
 import sentAnimation from '../../assets/animations/sentAnimation.json';
 import notSentAnimation from '../../assets/animations/notSentAnimation.json';
 import emailjsConfig from "../../assets/email.config";
+import { Link } from "react-router-dom";
 
 type EmailJSConfig = {
     SERVICE_ID: string;
@@ -108,6 +109,16 @@ const FormComp: React.FC = () => {
                             className="resize-none block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             required
                         ></textarea>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="check" required />
+                        <label htmlFor="privacy"> 
+                            <Link 
+                                className="hover:underline underline-offset-1 ms-2" 
+                                to='/privacy-policy'>
+                                    {t("getintouch.check")}
+                            </Link>
+                        </label>
                     </div>
                     <div className="relative">
                         <button

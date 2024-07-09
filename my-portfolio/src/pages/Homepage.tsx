@@ -35,7 +35,7 @@ export default function Homepage() {
         <div className="relative bg-primary grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 px-5 py-20 overflow-x-hidden select-none">
           <HeroComp />
           <IntroductionComp />
-          <Lottie className="w-64 hidden md:block absolute top-20 right-20" animationData={computerAnimation} />
+          <Lottie className="w-64 hidden md:block absolute top-10 right-2" animationData={computerAnimation} />
         </div>
         <div className="bg-almostWhite px-5 py-10 select-none">
           <SkillsComp />
