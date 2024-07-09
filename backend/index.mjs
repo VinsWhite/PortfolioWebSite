@@ -10,6 +10,10 @@ app.use(cors()); // cors to prevent errors
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.end('Hello from Express Server!');
+});
+
 app.get('/config', (req, res) => {
   res.json({
     SERVICE_ID: process.env.EMAILJS_SERVICE_ID,
