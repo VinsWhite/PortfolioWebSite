@@ -8,7 +8,7 @@ export default function HeroComp() {
 
   return (
     <motion.div
-      className="order-2 md:order-1 w-3/4 sm:w-2/4 md:w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md cursor-pointer duration-300 hover:scale-95"
+      className="order-2 md:order-1 w-5/6 sm:w-2/4 md:w-2/4 bg-almostWhite shadow-md shadow-secondary rounded-md cursor-pointer duration-300 hover:scale-95"
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 2 }}
@@ -18,11 +18,15 @@ export default function HeroComp() {
         <h2 className="text-xl">{t("hero-contacts.title")}</h2>
         <div className="flex gap-1 items-center">
           <IoIosContact className="size-4" />
-          <p>+39 392 529 5700</p>
+          <a href="tel:+393925295700" className="cursor-pointer hover:underline underline-offset-2">
+            <p>+39 392 529 5700</p>
+          </a>
         </div>
         <div className="flex gap-1 items-center">
           <CiMail className="size-4" />
-          <p>vincenzosa26@icloud.com</p>
+          <a href="mailto:vincenzosa26@icloud.com" className="cursor-pointer hover:underline underline-offset-2">
+            <p>vincenzosa26@icloud.com</p>
+          </a>
         </div>
       </div>
     </motion.div>

@@ -21,7 +21,10 @@ const FormComp: React.FC = () => {
   useEffect(() => {
     const fetchEmailjsConfig = async () => {
       try {
-        const response = await fetch('http://localhost:3000/config'); // Assuming the backend is hosted on the same server or proxied
+        const response = await fetch('https://portfolio-web-site-pearl.vercel.app/config');
+        if (!response.ok) {
+          throw new Error('Failed to fetch configuration');
+        }
         const data = await response.json();
         setEmailjsConfig(data);
       } catch (error) {
