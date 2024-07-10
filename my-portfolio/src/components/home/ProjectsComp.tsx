@@ -4,16 +4,7 @@ import ProjectDetail from "./ProjectDetail";
 import truncateText from "../../assets/functions/truncate";
 import HobbiesComp from "./HobbiesComp";
 import { GB, IT } from "country-flag-icons/react/1x1";
-
-interface Project {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    githubLink: string;
-    language: "GB" | "IT";
-    technologies: { image: string; alt: string }[];
-}
+import Project from '../../assets/interface/projectAttribute'
 
 const ProjectsComp: React.FC = () => {
     const { t } = useTranslation("global");

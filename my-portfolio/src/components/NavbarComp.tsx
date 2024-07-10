@@ -56,7 +56,7 @@ export default function NavbarComp() {
 
         {useMenu && (
             <div className="bg-primary opacity-90 md:hidden flex flex-col gap-3 items-center pb-3">
-                <p className="cursor-pointer text-black hover:text-gray-700">{t("navbar.about")}</p>
+                <NavLink to='/' className="cursor-pointer text-black hover:text-gray-700">{t("navbar.about")}</NavLink>
                 <NavLink to='/getintouch' className="bg-black hover:bg-gray-800 text-white rounded-lg py-1 px-2">{t("navbar.contact")}</NavLink>
                 <div className="flex items-center gap-3">
                     <IT title="Italian" onClick={() => handleChangeLanguage("it")} className={`size-5 cursor-pointer rounded-full ${i18n.language == 'it' ? "border-2 border-green-700 size-6" : ""}`} />

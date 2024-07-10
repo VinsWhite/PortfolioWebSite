@@ -27,7 +27,7 @@ export default function ScrollToTopComp() {
   return (
     <FaArrowTurnUp 
       onClick={handleClick}
-      className={`fixed bottom-10 right-10 text-secondary bg-white p-1 text-2xl rounded-md cursor-pointer transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
+      className={`fixed bottom-10 right-10 text-secondary bg-white p-1 text-2xl rounded-md cursor-pointer transition-opacity duration-400 ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
     />
   )
 }

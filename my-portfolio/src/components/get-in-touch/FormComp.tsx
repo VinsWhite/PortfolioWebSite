@@ -6,17 +6,14 @@ import emailAnimation from '../../assets/animations/emailAnimation.json';
 import sentAnimation from '../../assets/animations/sentAnimation.json';
 import notSentAnimation from '../../assets/animations/notSentAnimation.json';
 import { Link } from 'react-router-dom';
+import EmailJS from '../../assets/interface/emailjsAttribute';
 
 const FormComp: React.FC = () => {
   const { t } = useTranslation('global');
   const [animationSending, setAnimationSending] = useState<boolean>(false);
   const [animationSent, setAnimationSent] = useState<boolean>(false);
   const [animationNotSent, setAnimationNotSent] = useState<boolean>(false);
-  const [emailjsConfig, setEmailjsConfig] = useState<{
-    SERVICE_ID: string;
-    TEMPLATE_ID: string;
-    USER_ID: string;
-  } | null>(null);
+  const [emailjsConfig, setEmailjsConfig] = useState<EmailJS | null>(null);
 
   useEffect(() => {
     const fetchEmailjsConfig = async () => {
@@ -33,7 +30,7 @@ const FormComp: React.FC = () => {
     };
 
     fetchEmailjsConfig();
-  }, []); // Empty dependency array ensures this runs only once on component mount
+  }, []); 
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -55,7 +52,7 @@ const FormComp: React.FC = () => {
       message: target.message.value,
     };
 
-    setAnimationSending(true); // Start showing loading animation
+    setAnimationSending(true); 
 
     emailjs
       .send(emailjsConfig.SERVICE_ID, emailjsConfig.TEMPLATE_ID, formData, emailjsConfig.USER_ID)
