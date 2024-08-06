@@ -24,8 +24,8 @@ export default function HeroComp() {
         </div>
         <div className="flex gap-1 items-center">
           <CiMail className="size-4" />
-          <a href="mailto:vincenzosa26@icloud.com" className="cursor-pointer hover:underline underline-offset-2">
-            <p>vincenzosa26@icloud.com</p>
+          <a href="mailto:vincenzo_saccone@icloud.com" className="cursor-pointer hover:underline underline-offset-2">
+            <p>vincenzo_saccone@icloud.com</p>
           </a>
         </div>
       </div>

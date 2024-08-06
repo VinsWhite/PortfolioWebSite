@@ -60,15 +60,15 @@ export default function IntroductionComp() {
         {currentLanguage === 'en' ? (
           <a
             className="bg-secondary text-white py-1 px-2 rounded-full shadow-md shadow-secondary duration-300 hover:scale-105"
-            href='/cv/ENG - curriculumWithPhoto3.pdf'
-            download="ENG - Curriculum Vincenzo Saccone"
+            href='/cv/ENG curriculum - Vincenzo Saccone.pdf'
+            download="ENG - curriculum Vincenzo Saccone"
           >
             {t("introduction.cv")}
           </a>
         ) : (
           <a
             className="bg-secondary text-white py-1 px-2 rounded-full shadow-md shadow-secondary duration-300 hover:scale-105"
-            href='/cv/curriculum-aggiornato5.pdf'
+            href='/cv/curriculum - Vincenzo Saccone.pdf'
             download="IT - Curriculum Vincenzo Saccone"
           >
             {t("introduction.cv")}
